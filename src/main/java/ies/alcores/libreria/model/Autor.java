@@ -19,7 +19,7 @@ public class Autor {
     private String biografia;
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL)
-    @JsonIgnore // Muy importante para evitar bucles en las respuestas JSON
+    @JsonIgnore
     private List<Libro> libros;
 
     public Integer getId() {
